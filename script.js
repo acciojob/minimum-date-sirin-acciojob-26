@@ -1,5 +1,10 @@
 function minDate(dates) {
   //write you code here
+	  // Use the spread operator to avoid modifying the original array
+  return [...dates].reduce((earliest, current) => {
+    // Compare the current date with the earliest date found so far
+    return current < earliest ? current : earliest;
+  });
 }
 
 // Do not change the code
